@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% extends 'mysites/base.html' %}
+
+    {% block content %}
+        <p>Urls</p>
+
+        <ul>
+            {% for url in urls %}
+                <li>
+                    <p>{{ url }}</p>
+                </li>
+            {% empty %}
+                <li>No topics have been added yet</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'mysites:new_url' %}">Add a new url</a>
+    {% endblock content %}
+</body>
+</html>

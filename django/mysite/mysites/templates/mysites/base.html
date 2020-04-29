@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysites</title>
+</head>
+<body>
+    <div>
+        <a href="{% url 'mysites:index' %}" >MySites</a> - 
+        <a href="{% url 'mysites:topics' %}" >Topics</a>
+    </div>
+
+    {% block content %} {% endblock content %}
+</body>
+<script>
+</script>
+</html>
